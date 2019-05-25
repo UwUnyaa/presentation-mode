@@ -93,6 +93,8 @@ Font size can be adjusted by using
   :lighter " Presentation"
   :global t
   (presentation-mode-set-font-size
+   ;; set font size to default or revert to initial value depending on whether
+   ;; the mode is enabled or disabled
    (if presentation-mode
        presentation-mode-default-font-size
      presentation-mode--original-font-size))
