@@ -95,7 +95,18 @@ Font size can be adjusted by using
   (presentation-mode-set-font-size
    (if presentation-mode
        presentation-mode-default-font-size
-     presentation-mode--original-font-size)))
+     presentation-mode--original-font-size))
+  (when presentation-mode
+    (message "Use +, = or - to adjust font size")
+    (set-transient-map
+     (let ((map (make-sparse-keymap)))
+       (mapc
+        (lambda (key)
+          (define-key map (kbd key) #'presentation-mode-increase-font-size))
+        '("+" "="))
+       (define-key map (kbd "-") #'presentation-mode-decrease-font-size)
+       map)
+     t)))
 
 (provide 'presentation-mode)
 ;;; presentation-mode.el ends here
