@@ -1,0 +1,4 @@
+#+TITLE: ~presentation-mode~ - temporary text size enlargement for presenting
+
+This mode provides a global minor mode for presenting in Emacs, similar to
+functionality in [[https://blog.jetbrains.com/phpstorm/2013/10/full-screen-for-all-platforms-and-presentation-mode-with-phpstorm-7/][InteliJ IDEs]].
