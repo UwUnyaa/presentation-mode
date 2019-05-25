@@ -45,13 +45,13 @@ Used by `presentation-mode-increase-font-size' and
 `presentation-mode-decrease-font-size'."
   :type 'number)
 
-(defvar presentation-mode--original-font-size
-  (presentation-mode-get-font-size)
-  "Original font size to revert to when disabling `presentation-mode'.")
-
 (defun presentation-mode-get-font-size ()
   "Return the current font height."
   (face-attribute 'default :height))
+
+(defvar presentation-mode--original-font-size
+  (presentation-mode-get-font-size)
+  "Original font size to revert to when disabling `presentation-mode'.")
 
 (defun presentation-mode-set-font-size (size)
   "Set the default font size to SIZE."
