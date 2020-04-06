@@ -1,7 +1,7 @@
 ;;; presentation-mode.el --- temporary font size adjustment for presenting -*- lexical-binding: t; coding: utf-8 -*-
 ;;; Version: 0.0.2
 
-;; Author: DoMiNeLa10 (https://github.com/DoMiNeLa10)
+;; Author: UwUnyaa (https://github.com/UwUnyaa)
 
 ;;; license: GPLv3 or newer
 
