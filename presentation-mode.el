@@ -1,7 +1,8 @@
 ;;; presentation-mode.el --- temporary font size adjustment for presenting -*- lexical-binding: t; coding: utf-8 -*-
-;;; Version: 0.0.2
-
+;; Version: 1.0.0
 ;; Author: UwUnyaa (https://github.com/UwUnyaa)
+;; URL: https://github.com/UwUnyaa/presentation-mode
+;; Package-Requires: ((emacs "24.4"))
 
 ;;; license: GPLv3 or newer
 
@@ -30,12 +31,12 @@
 
 ;;; Code:
 
-(defgroup presentation-mode '()
+(defgroup presentation '()
   "Global minor mode to enlarge font size for presentations."
   :group 'faces)
 
 (defcustom presentation-mode-default-font-size 120
-  "Default font size for `presentation-mode' when enabled."
+  "Default font size for function `presentation-mode' when enabled."
   :type 'number)
 
 (defcustom presentation-mode-adjust-font-step 10
@@ -51,7 +52,7 @@ Used by `presentation-mode-increase-font-size' and
 
 (defvar presentation-mode--original-font-size
   (presentation-mode-get-font-size)
-  "Original font size to revert to when disabling `presentation-mode'.")
+  "Original font size to revert to when disabling function `presentation-mode'.")
 
 (defun presentation-mode-set-font-size (size)
   "Set the default font size to SIZE."
